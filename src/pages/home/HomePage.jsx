@@ -1,6 +1,10 @@
+import { CardComponent } from "../../components/card/CardComponent"
+import * as PageStyled from "../Pages.style"
 
 export const HomePage = () => {
   return(
-    <p>HomePage is Render</p>
+    <PageStyled.Container>
+      <CardComponent/>
+    </PageStyled.Container>
   )
 }
