@@ -1,11 +1,22 @@
 import * as Styled from './CardComponent.style';
+import PropTypes from 'prop-types'
 
-export const CardComponent = () => {
+export const CardComponent = ({title, description, email}) => {
   return(
     <Styled.Card>
-      <Styled.Title>Robert Santos</Styled.Title>
-      <Styled.Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut repellendus, amet molestias eos numquam, obcaecati eligendi, necessitatibus a inventore ea doloribus similique nulla nam molestiae rem aspernatur ut magnam.</Styled.Description>
-      <Styled.Text>robertsantosti@outlook.com</Styled.Text>
+      <Styled.Title>{title}</Styled.Title>
+
+      { !!description && 
+        <Styled.Description>{description}</Styled.Description>
+      }
+      
+      <Styled.Text>{email}</Styled.Text>
     </Styled.Card>
   )
+}
+
+CardComponent.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  email: PropTypes.string.isRequired,
 }
