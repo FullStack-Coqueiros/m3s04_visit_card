@@ -1,6 +1,6 @@
 
 export const ErrorPage = () => {
   return(
-    <p>ErrorPage is Render</p>
+    <p data-testid="error-testid">ErrorPage is Render</p>
   )
 }

@@ -9,8 +9,13 @@ export const HomePage = () => {
   }
 
   return(
-    <PageStyled.Container>
-      <CardComponent description={data.description} title={data.title} email={data.email}/>
+    <PageStyled.Container data-testid="home-testid">
+      <CardComponent
+        testid='card-robert'
+        description={data.description}
+        title={data.title}
+        email={data.email}
+      />
     </PageStyled.Container>
   )
 }
